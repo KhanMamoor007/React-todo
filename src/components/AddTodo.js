@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, Container } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-function ShowTodo(props) {
+function AddTodo(props) {
   return (
     <div>
       <Container maxWidth="sm">
@@ -32,4 +32,4 @@ function ShowTodo(props) {
   );
 }
 
-export default ShowTodo;
+export default AddTodo;

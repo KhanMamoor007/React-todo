@@ -14,17 +14,16 @@ function Todo() {
   const submitHandler = (e) => {
     e.preventDefault();
     if (task === "") {
-      return "enter a value";
-    } else {
-      const newData = task;
-      setData([...data, newData]);
-      setTask("");
+      return;
     }
+    const newData = task;
+    setData([...data, newData]);
+    setTask("");
   };
 
-  const deleteItem = (a) => {
+  const deleteItem = (indx) => {
     const finalData = data.filter((curEle, index) => {
-      return index !== a;
+      return index !== indx;
     });
     setData(finalData);
   };
@@ -38,6 +37,7 @@ function Todo() {
               label="I will do this"
               variant="standard"
               type="text"
+              value={task}
               onChange={onChangeHandler}
             />
             <Button
